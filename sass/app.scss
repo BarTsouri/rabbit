@@ -1,0 +1,141 @@
+body{
+  background-color: #fafafa;
+  width: 100%;
+  margin: 0;
+  font: 14px/20px "FranklinITCProLight","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  > *{
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1200px){
+  body{
+    > * {
+      max-width: 1050px;
+      margin-left: calc((100vw - 1050px) / 2);
+      margin-right: calc((100vw - 1050px) / 2);
+    }
+  }
+}
+
+.image{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 60px;
+  background-size: contain;
+}
+
+#header{
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+  width: 100vw;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  max-width: none;
+}
+
+span{
+  font-family: "FranklinITCProLight","Helvetica Neue Light","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+#section-1{
+  display: flex;
+  height: 430px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+  padding-top: 120px;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    padding: 0 20px 0 0;
+    overflow: hidden;
+
+    .image{
+      background-image: url("../images/the-godfather-0.jpg");
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    .headline{
+      color: #2A2A2A;
+      font-family: "PostoniStandardRegular",Georgia,serif;
+      font-size: 2rem;
+      padding: 15px 0;
+    }
+
+    span.details{
+      text-align: center;
+    }
+  }
+
+  .right{
+    width: 35%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+
+    .image{
+      align-self: flex-start;
+    }
+
+    .upper-article{
+      display: flex;
+      height: 33.33%;
+
+      .image{
+        background-image: url("../images/the-godfather-1.jpg");
+        min-width: 110px;
+        min-height: 110px;
+      }
+    }
+
+    .lower-container{
+      height: 66.66%;
+
+      .article-1{
+        display: flex;
+        height: 50%;
+
+        .image{
+          background-image: url("../images/the-godfather-2.jpg");
+          min-width: 110px;
+          min-height: 110px;
+        }
+      }
+
+      .article-2{
+        display: flex;
+        height: 50%;
+
+        .image{
+          background-image: url("../images/the-godfather-3.jpg");
+          height: 100%;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+#section-2{
+
+}
+
+#section-3{
+
+}
