@@ -5,8 +5,8 @@ body{
   font: 14px/20px "FranklinITCProLight","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   > *{
     width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 5%;
+    margin-right: 5%;
     overflow: hidden;
   }
 }
@@ -15,8 +15,8 @@ body{
   body{
     > * {
       max-width: 1050px;
-      margin-left: calc((100vw - 1050px) / 2);
-      margin-right: calc((100vw - 1050px) / 2);
+      margin-left: calc((100% - 1050px) / 2);
+      margin-right: calc((100% - 1050px) / 2);
     }
   }
 }
@@ -32,9 +32,8 @@ body{
   color: white;
   background-color: black;
   box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
-  width: 100vw;
+  width: 100%;
   text-align: center;
-  font-size: 30px;
   line-height: 30px;
   height: 40px;
   display: flex;
@@ -42,17 +41,45 @@ body{
   justify-content: center;
   margin: 0 !important;
   max-width: none;
+  position:relative;
+
+  .headline{
+    font-size: 30px;
+  }
+
+  .sign-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    border: 1px solid #ffffff;
+    padding: 6px 5px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 10px;
+    font-family: "FranklinITCProBold","Helvetica Neue Bold","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    background-color: #222222;
+  }
 }
 
 span{
   font-family: "FranklinITCProLight","Helvetica Neue Light","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
 
+.separator{
+  height:1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #section-1{
   display: flex;
   height: 430px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 20px;
+  overflow:hidden;
   padding-top: 120px;
 
   .left {
@@ -88,6 +115,7 @@ span{
     height: 100%;
     display:flex;
     flex-direction: column;
+    overflow: hidden;
 
     .image{
       align-self: flex-start;
@@ -124,8 +152,8 @@ span{
 
         .image{
           background-image: url("../images/the-godfather-3.jpg");
-          height: 100%;
-          width: 50%;
+          min-width: 110px;
+          min-height: 157px;
         }
       }
     }
@@ -133,9 +161,100 @@ span{
 }
 
 #section-2{
+  display: flex;
 
+  .container{
+    padding-right: 20px;
+  }
+  .headline-big{
+    font-size: 1.5rem;
+  }
+
+  iframe{
+    min-width: 400px;
+    min-height: 220px;
+  }
 }
 
 #section-3{
+  display: flex;
 
+  .headline{
+    margin: 4px 30px 0 5px;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+
+  .right{
+    display: flex;
+    flex-wrap: wrap;
+
+    .article {
+      width: calc(50% - 5px);
+      box-sizing: border-box;
+      display: flex;
+      padding: 10px;
+      box-shadow: 0 0 1px 1px rgba(0,0,0, 0.1);
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      &:nth-child(2n){
+        margin-left: 5px;
+      }
+
+      &:nth-child(2n + 1){
+        margin-right: 5px;
+      }
+
+      $factor: 0.375;
+      .image{
+        width: 340px * $factor;
+        height: 430px * $factor;
+        flex-shrink: 0;
+      }
+
+      span{
+        padding: 0 5px 0 10px;
+      }
+    }
+
+    .article-1 .image{
+      background-image: url("../images/starwars-1.jpg");
+      margin-top: 0;
+    }
+
+    .article-2 .image{
+      background-image: url("../images/starwars-2.jpg");
+      margin-top: 0;
+    }
+
+    .article-3 .image{
+      background-image: url("../images/starwars-3.jpg");
+    }
+
+    .article-4 .image{
+      background-image: url("../images/starwars-4.jpg");
+    }
+
+    .article-5 .image{
+      background-image: url("../images/starwars-5.jpg");
+    }
+
+    .article-6 .image{
+      background-image: url("../images/starwars-6.jpg");
+    }
+
+    .article-7 .image{
+      background-image: url("../images/starwars-7.jpg");
+    }
+  }
+}
+
+#footer{
+  color: rgba(0,0,0,0.6);
+  text-align: center;
+
+  .separator{
+    margin: 22px 0
+  }
 }

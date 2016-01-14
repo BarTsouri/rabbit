@@ -5,15 +5,15 @@ body {
   font: 14px/20px "FranklinITCProLight","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
   body > * {
     width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 5%;
+    margin-right: 5%;
     overflow: hidden; }
 
 @media (min-width: 1200px) {
   body > * {
     max-width: 1050px;
-    margin-left: calc((100vw - 1050px) / 2);
-    margin-right: calc((100vw - 1050px) / 2); } }
+    margin-left: calc((100% - 1050px) / 2);
+    margin-right: calc((100% - 1050px) / 2); } }
 
 .image {
   background-repeat: no-repeat;
@@ -25,25 +25,47 @@ body {
   color: white;
   background-color: black;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-  width: 100vw;
+  width: 100%;
   text-align: center;
-  font-size: 30px;
   line-height: 30px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 !important;
-  max-width: none; }
+  max-width: none;
+  position: relative; }
+  #header .headline {
+    font-size: 30px; }
+  #header .sign-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    border: 1px solid #ffffff;
+    padding: 6px 5px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 10px;
+    font-family: "FranklinITCProBold","Helvetica Neue Bold","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    background-color: #222222; }
 
 span {
   font-family: "FranklinITCProLight","Helvetica Neue Light","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; }
 
+.separator {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
 #section-1 {
   display: flex;
   height: 430px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 20px;
+  overflow: hidden;
   padding-top: 120px; }
   #section-1 .left {
     display: flex;
@@ -69,7 +91,8 @@ span {
     width: 35%;
     height: 100%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    overflow: hidden; }
     #section-1 .right .image {
       align-self: flex-start; }
     #section-1 .right .upper-article {
@@ -93,7 +116,67 @@ span {
         height: 50%; }
         #section-1 .right .lower-container .article-2 .image {
           background-image: url("../images/the-godfather-3.jpg");
-          height: 100%;
-          width: 50%; }
+          min-width: 110px;
+          min-height: 157px; }
+
+#section-2 {
+  display: flex; }
+  #section-2 .container {
+    padding-right: 20px; }
+  #section-2 .headline-big {
+    font-size: 1.5rem; }
+  #section-2 iframe {
+    min-width: 400px;
+    min-height: 220px; }
+
+#section-3 {
+  display: flex; }
+  #section-3 .headline {
+    margin: 4px 30px 0 5px;
+    white-space: nowrap;
+    font-size: 1rem; }
+  #section-3 .right {
+    display: flex;
+    flex-wrap: wrap; }
+    #section-3 .right .article {
+      width: calc(50% - 5px);
+      box-sizing: border-box;
+      display: flex;
+      padding: 10px;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+      margin-top: 5px;
+      margin-bottom: 5px; }
+      #section-3 .right .article:nth-child(2n) {
+        margin-left: 5px; }
+      #section-3 .right .article:nth-child(2n + 1) {
+        margin-right: 5px; }
+      #section-3 .right .article .image {
+        width: 127.5px;
+        height: 161.25px;
+        flex-shrink: 0; }
+      #section-3 .right .article span {
+        padding: 0 5px 0 10px; }
+    #section-3 .right .article-1 .image {
+      background-image: url("../images/starwars-1.jpg");
+      margin-top: 0; }
+    #section-3 .right .article-2 .image {
+      background-image: url("../images/starwars-2.jpg");
+      margin-top: 0; }
+    #section-3 .right .article-3 .image {
+      background-image: url("../images/starwars-3.jpg"); }
+    #section-3 .right .article-4 .image {
+      background-image: url("../images/starwars-4.jpg"); }
+    #section-3 .right .article-5 .image {
+      background-image: url("../images/starwars-5.jpg"); }
+    #section-3 .right .article-6 .image {
+      background-image: url("../images/starwars-6.jpg"); }
+    #section-3 .right .article-7 .image {
+      background-image: url("../images/starwars-7.jpg"); }
+
+#footer {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center; }
+  #footer .separator {
+    margin: 22px 0; }
 
 /*# sourceMappingURL=app.css.map */
