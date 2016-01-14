@@ -43,8 +43,9 @@ body{
   max-width: none;
   position:relative;
 
-  .headline{
-    font-size: 30px;
+  .image{
+    width: 250px;
+    background-image: url("../images/logo.png");
   }
 
   .sign-out{

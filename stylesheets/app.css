@@ -35,8 +35,9 @@ body {
   margin: 0 !important;
   max-width: none;
   position: relative; }
-  #header .headline {
-    font-size: 30px; }
+  #header .image {
+    width: 250px;
+    background-image: url("../images/logo.png"); }
   #header .sign-out {
     display: flex;
     justify-content: center;
